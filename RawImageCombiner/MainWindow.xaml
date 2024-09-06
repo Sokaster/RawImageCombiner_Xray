@@ -1,0 +1,131 @@
+﻿<Window x:Class="RawImageCombiner.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:RawImageCombiner"
+        mc:Ignorable="d"
+        Title="RAW Image Combiner" Height="450" Width="500"
+        WindowStartupLocation="CenterScreen"
+        Background="Black">
+    <Grid Margin="10">
+        <StackPanel>
+            <Button Name="SelectFilesButton" Content="Выбрать RAW файлы" Click="OnSelectFilesButtonClick" Margin="0,0,0,10" Height="40"
+                    Background="Yellow" Foreground="Black" FontWeight="Bold"/>
+
+            <CheckBox Name="UseStepCheckbox" Content="Использовать шаг" Margin="0,0,0,10" Checked="UseStepCheckbox_Checked" Unchecked="UseStepCheckbox_Unchecked"
+                      Background="Black" Foreground="Yellow" FontWeight="Bold"/>
+            <ComboBox Name="StepComboBox" Margin="0,0,0,10" IsEnabled="False" Height="30" Background="Yellow" Foreground="Black">
+                <ComboBoxItem Content="Каждый 2-й снимок" Tag="2" Background="Yellow" Foreground="Black"/>
+                <ComboBoxItem Content="Каждый 3-й снимок" Tag="3" Background="Yellow" Foreground="Black"/>
+                <ComboBoxItem Content="Каждый 4-й снимок" Tag="4" Background="Yellow" Foreground="Black"/>
+                <ComboBoxItem Content="Каждый 5-й снимок" Tag="5" Background="Yellow" Foreground="Black"/>
+                <ComboBoxItem Content="Каждый 7-й снимок" Tag="7" Background="Yellow" Foreground="Black"/>
+                <ComboBoxItem Content="Каждый 9-й снимок" Tag="9" Background="Yellow" Foreground="Black"/>
+                <ComboBoxItem Content="Каждый 10-й снимок" Tag="10" Background="Yellow" Foreground="Black"/>
+                <ComboBoxItem Content="Каждый 12-й снимок" Tag="12" Background="Yellow" Foreground="Black"/>
+            </ComboBox>
+
+            <RadioButton Name="SelectMode1" Content="Режим 1: Объединение изображений" IsChecked="True" Margin="0,10,0,10"
+                         Background="Black" Foreground="Yellow" FontWeight="Bold"/>
+            <RadioButton Name="SelectMode2" Content="Режим 2: Объединение пикселей" Margin="0,0,0,10"
+                         Background="Black" Foreground="Yellow" FontWeight="Bold"/>
+
+            <ComboBox Name="PixelCountComboBox" Margin="0,0,0,10" IsEnabled="True" Height="30" MaxDropDownHeight="150" Background="Yellow" Foreground="Black">
+                <ComboBoxItem Content="1 пиксель" Tag="1" Background="Yellow" Foreground="Black"/>
+                <ComboBoxItem Content="2 пикселя" Tag="2" Background="Yellow" Foreground="Black"/>
+                <ComboBoxItem Content="3 пикселя" Tag="3" Background="Yellow" Foreground="Black"/>
+                <ComboBoxItem Content="4 пикселя" Tag="4" Background="Yellow" Foreground="Black"/>
+                <ComboBoxItem Content="5 пикселей" Tag="5" Background="Yellow" Foreground="Black"/>
+                <ComboBoxItem Content="6 пикселей" Tag="6" Background="Yellow" Foreground="Black"/>
+                <ComboBoxItem Content="7 пикселей" Tag="7" Background="Yellow" Foreground="Black"/>
+                <ComboBoxItem Content="8 пикселей" Tag="8" Background="Yellow" Foreground="Black"/>
+                <ComboBoxItem Content="9 пикселей" Tag="9" Background="Yellow" Foreground="Black"/>
+                <ComboBoxItem Content="10 пикселей" Tag="10" Background="Yellow" Foreground="Black"/>
+                <ComboBoxItem Content="11 пикселей" Tag="11" Background="Yellow" Foreground="Black"/>
+                <ComboBoxItem Content="12 пикселей" Tag="12" Background="Yellow" Foreground="Black"/>
+                <ComboBoxItem Content="13 пикселей" Tag="13" Background="Yellow" Foreground="Black"/>
+                <ComboBoxItem Content="14 пикселей" Tag="14" Background="Yellow" Foreground="Black"/>
+                <ComboBoxItem Content="15 пикселей" Tag="15" Background="Yellow" Foreground="Black"/>
+                <ComboBoxItem Content="16 пикселей" Tag="16" Background="Yellow" Foreground="Black"/>
+                <ComboBoxItem Content="17 пикселей" Tag="17" Background="Yellow" Foreground="Black"/>
+                <ComboBoxItem Content="18 пикселей" Tag="18" Background="Yellow" Foreground="Black"/>
+                <ComboBoxItem Content="19 пикселей" Tag="19" Background="Yellow" Foreground="Black"/>
+                <ComboBoxItem Content="20 пикселей" Tag="20" Background="Yellow" Foreground="Black"/>
+                <ComboBoxItem Content="21 пиксель" Tag="21" Background="Yellow" Foreground="Black"/>
+                <ComboBoxItem Content="22 пикселя" Tag="22" Background="Yellow" Foreground="Black"/>
+                <ComboBoxItem Content="23 пикселя" Tag="23" Background="Yellow" Foreground="Black"/>
+                <ComboBoxItem Content="24 пикселя" Tag="24" Background="Yellow" Foreground="Black"/>
+                <ComboBoxItem Content="25 пикселей" Tag="25" Background="Yellow" Foreground="Black"/>
+                <ComboBoxItem Content="26 пикселей" Tag="26" Background="Yellow" Foreground="Black"/>
+                <ComboBoxItem Content="27 пикселей" Tag="27" Background="Yellow" Foreground="Black"/>
+                <ComboBoxItem Content="28 пикселей" Tag="28" Background="Yellow" Foreground="Black"/>
+                <ComboBoxItem Content="29 пикселей" Tag="29" Background="Yellow" Foreground="Black"/>
+                <ComboBoxItem Content="30 пикселей" Tag="30" Background="Yellow" Foreground="Black"/>
+                <ComboBoxItem Content="31 пиксель" Tag="31" Background="Yellow" Foreground="Black"/>
+                <ComboBoxItem Content="32 пикселя" Tag="32" Background="Yellow" Foreground="Black"/>
+                <ComboBoxItem Content="33 пикселя" Tag="33" Background="Yellow" Foreground="Black"/>
+                <ComboBoxItem Content="34 пикселя" Tag="34" Background="Yellow" Foreground="Black"/>
+                <ComboBoxItem Content="35 пикселей" Tag="35" Background="Yellow" Foreground="Black"/>
+                <ComboBoxItem Content="36 пикселей" Tag="36" Background="Yellow" Foreground="Black"/>
+                <ComboBoxItem Content="37 пикселей" Tag="37" Background="Yellow" Foreground="Black"/>
+                <ComboBoxItem Content="38 пикселей" Tag="38" Background="Yellow" Foreground="Black"/>
+                <ComboBoxItem Content="39 пикселей" Tag="39" Background="Yellow" Foreground="Black"/>
+                <ComboBoxItem Content="40 пикселей" Tag="40" Background="Yellow" Foreground="Black"/>
+                <ComboBoxItem Content="41 пиксель" Tag="41" Background="Yellow" Foreground="Black"/>
+                <ComboBoxItem Content="42 пикселя" Tag="42" Background="Yellow" Foreground="Black"/>
+                <ComboBoxItem Content="43 пикселя" Tag="43" Background="Yellow" Foreground="Black"/>
+                <ComboBoxItem Content="44 пикселя" Tag="44" Background="Yellow" Foreground="Black"/>
+                <ComboBoxItem Content="45 пикселей" Tag="45" Background="Yellow" Foreground="Black"/>
+                <ComboBoxItem Content="46 пикселей" Tag="46" Background="Yellow" Foreground="Black"/>
+                <ComboBoxItem Content="47 пикселей" Tag="47" Background="Yellow" Foreground="Black"/>
+                <ComboBoxItem Content="48 пикселей" Tag="48" Background="Yellow" Foreground="Black"/>
+                <ComboBoxItem Content="49 пикселей" Tag="49" Background="Yellow" Foreground="Black"/>
+                <ComboBoxItem Content="50 пикселей" Tag="50" Background="Yellow" Foreground="Black"/>
+                <ComboBoxItem Content="51 пиксель" Tag="51" Background="Yellow" Foreground="Black"/>
+                <ComboBoxItem Content="52 пикселя" Tag="52" Background="Yellow" Foreground="Black"/>
+                <ComboBoxItem Content="53 пикселя" Tag="53" Background="Yellow" Foreground="Black"/>
+                <ComboBoxItem Content="54 пикселя" Tag="54" Background="Yellow" Foreground="Black"/>
+                <ComboBoxItem Content="55 пикселей" Tag="55" Background="Yellow" Foreground="Black"/>
+                <ComboBoxItem Content="56 пикселей" Tag="56" Background="Yellow" Foreground="Black"/>
+                <ComboBoxItem Content="57 пикселей" Tag="57" Background="Yellow" Foreground="Black"/>
+                <ComboBoxItem Content="58 пикселей" Tag="58" Background="Yellow" Foreground="Black"/>
+                <ComboBoxItem Content="59 пикселей" Tag="59" Background="Yellow" Foreground="Black"/>
+                <ComboBoxItem Content="60 пикселей" Tag="60" Background="Yellow" Foreground="Black"/>
+                <ComboBoxItem Content="61 пиксель" Tag="61" Background="Yellow" Foreground="Black"/>
+                <ComboBoxItem Content="62 пикселя" Tag="62" Background="Yellow" Foreground="Black"/>
+                <ComboBoxItem Content="63 пикселя" Tag="63" Background="Yellow" Foreground="Black"/>
+                <ComboBoxItem Content="64 пикселя" Tag="64" Background="Yellow" Foreground="Black"/>
+                <ComboBoxItem Content="65 пикселей" Tag="65" Background="Yellow" Foreground="Black"/>
+                <ComboBoxItem Content="66 пикселей" Tag="66" Background="Yellow" Foreground="Black"/>
+                <ComboBoxItem Content="67 пикселей" Tag="67" Background="Yellow" Foreground="Black"/>
+                <ComboBoxItem Content="68 пикселей" Tag="68" Background="Yellow" Foreground="Black"/>
+                <ComboBoxItem Content="69 пикселей" Tag="69" Background="Yellow" Foreground="Black"/>
+                <ComboBoxItem Content="70 пикселей" Tag="70" Background="Yellow" Foreground="Black"/>
+                <ComboBoxItem Content="71 пиксель" Tag="71" Background="Yellow" Foreground="Black"/>
+                <ComboBoxItem Content="72 пикселя" Tag="72" Background="Yellow" Foreground="Black"/>
+            </ComboBox>
+
+
+            <StackPanel Orientation="Horizontal" Margin="0,0,0,10">
+                <RadioButton Name="LeftSideRadioButton" Content="Слева" IsChecked="True" Margin="0,0,20,0"
+                             Background="Black" Foreground="Yellow" FontWeight="Bold"/>
+                <RadioButton Name="RightSideRadioButton" Content="Справа"
+                             Background="Black" Foreground="Yellow" FontWeight="Bold"/>
+            </StackPanel>
+
+            <TextBlock Name="SelectedFilesTextBlock" Text="Файлы не выбраны" Margin="0,10,0,10" Foreground="Yellow" FontWeight="Bold"/>
+            <TextBlock Name="CalculatedLengthTextBlock" Text="Рассчитанная длина итогового изображения: 0 px" Margin="0,0,0,10" FontWeight="Bold" Foreground="Yellow"/>
+            <CheckBox Name="CreateDicomCheckbox" Content="Создать DICOM файл" Margin="0,0,0,10" Foreground="Yellow" Background="Black" FontWeight="Bold"/>
+
+            <Button Name="CombineButton" Content="Объединить изображения" Click="OnCombineButtonClick" Height="40" IsEnabled="False"
+                    Background="Yellow" Foreground="Black" FontWeight="Bold"/>
+
+            <TextBox Name="WidthTextBox" Width="100" Margin="0,0,10,10" Text="Ширина" Background="Yellow" Foreground="Black" FontWeight="Bold"/>
+            <TextBox Name="HeightTextBox" Width="100" Margin="0,0,0,10" Text="Высота" Background="Yellow" Foreground="Black" FontWeight="Bold"/>
+
+            <Button Name="NormalizeAndConvertButton" Content="Выбрать изображение и нормировать в DICOM" Click="OnNormalizeAndConvertButtonClick" Height="40"
+                    Background="Yellow" Foreground="Black" FontWeight="Bold"/>
+        </StackPanel>
+    </Grid>
+</Window>
